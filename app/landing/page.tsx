@@ -4,6 +4,10 @@ import CostumeButton from "../components/button";
 import Topbanner from "../components/home-comp/topbanner";
 import ExploreBusiness from "../components/home-comp/exploreBusiness";
 import AdvantageCard from "../components/home-comp/advantageCard";
+import FrequentlyQuestions from "../components/home-comp/frequentlyQuestions";
+import HowItWorks from "../components/home-comp/howItWorks";
+import LatestNewsUpdates from "../components/home-comp/latestNewsUpdates";
+import GetInTouch from "../components/home-comp/getInTouch";
 
 const Landing = () => {
   return (
@@ -36,8 +40,13 @@ const Landing = () => {
           </Box>
           <ExploreBusiness />
         </Box>
-        {/* <HomePage /> */}
-        <AdvantageCard />
+        <Stack spacing={4}>
+          <AdvantageCard />
+          <HowItWorks />
+          <LatestNewsUpdates />
+          <GetInTouch />
+          <FrequentlyQuestions />
+        </Stack>
       </Box>
     </>
   );
