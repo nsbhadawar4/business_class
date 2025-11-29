@@ -2,6 +2,7 @@ import Image from "next/image";
 import CostumeButton from "../button";
 import { Avatar, Box, Grid, Stack, Typography } from "@mui/material";
 import IMAGES from "@/app/assets/images";
+import SVGICON from "@/app/assets/svg/icon";
 
 export default function Topbanner() {
   return (
@@ -41,6 +42,7 @@ export default function Topbanner() {
               <CostumeButton
                 className="primaryBtn"
                 stylesRest={{ width: "fit-content !important" }}
+                endIcon={<SVGICON.Arrowup />}
               >
                 Start Planning
               </CostumeButton>
@@ -50,23 +52,20 @@ export default function Topbanner() {
                   display: "flex",
                   alignItems: "center",
                   gap: 2,
-                  padding: "20px 28px",
-                  borderRadius: "16px",
-                  width: "fit-content",
                 }}
               >
                 {/* Avatar Group */}
                 <Box sx={{ display: "flex" }}>
-                  {[IMAGES.Homebanner, IMAGES.Homebanner].map((img, index) => (
+                  {[IMAGES.Users].map((img, index) => (
                     <Avatar
                       key={index}
                       src={img.src}
                       sx={{
-                        width: 42,
+                        width: "auto",
                         height: 42,
-                        border: "2px solid white",
-                        ml: index === 0 ? 0 : -1.8, // perfect overlap
+                        ml: index === 0 ? 0 : -1.8,
                         zIndex: index === 0 ? 2 : 1,
+                        borderRadius: "0",
                       }}
                     />
                   ))}

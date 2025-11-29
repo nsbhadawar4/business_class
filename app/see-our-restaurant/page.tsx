@@ -3,9 +3,8 @@ import { Box, Grid, Typography, FormGroup, Stack } from "@mui/material";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { LabeledInput } from "../custom-input";
-import CostumeButton from "../button";
-import ClickableBox from "../router";
+import ClickableBox from "../components/router";
+import CostumeButton from "../components/button";
 
 export default function LatestNewsUpdates() {
   const newsData = [
@@ -33,10 +32,46 @@ export default function LatestNewsUpdates() {
       date: "1/15/2024",
       read: "3 min read",
     },
+    {
+      title: "New Restaurant Partners Join Our Network",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
+    {
+      title: "Holiday Special: Double Discounts Weekend",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
+    {
+      title: "New Restaurant Partners Join Our Network",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
+    {
+      title: "Holiday Special: Double Discounts Weekend",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
+    {
+      title: "New Restaurant Partners Join Our Network",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
+    {
+      title: "Holiday Special: Double Discounts Weekend",
+      desc: "Five amazing local restaurants have joined our platform this month, offering exclusive deals to our members.",
+      date: "1/15/2024",
+      read: "3 min read",
+    },
   ];
 
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box className="pageColor">
       {/* NEWS GRID */}
       <Box sx={{ mb: 3, textAlign: "center" }}>
         <Typography variant="h2">
@@ -114,7 +149,7 @@ export default function LatestNewsUpdates() {
                 </Box>
 
                 {/* READ MORE */}
-                <ClickableBox nextPageUrl="/see-our-restaurant">
+                <ClickableBox nextPageUrl="#">
                   <Box
                     sx={{
                       display: "flex",
@@ -144,79 +179,6 @@ export default function LatestNewsUpdates() {
           view all
         </CostumeButton>
       </Box>
-
-      {/* STAY IN THE LOOP SECTION */}
-      <Grid container justifyContent="center" sx={{ mt: 6 }}>
-        <Grid size={{ xs: 12, md: 12 }}>
-          <Box
-            sx={{
-              background:
-                "linear-gradient(90deg, rgba(0,0,255,0.08) 0%, rgba(187,51,255,0.08) 100%)",
-              borderRadius: "24px",
-              p: { xs: 4, md: 6 },
-              textAlign: "center",
-              border: "1px solid rgba(0,0,0,0.05)",
-            }}
-          >
-            {/* TITLE */}
-            <Typography
-              sx={{
-                fontSize: "22px",
-                fontWeight: 700,
-                color: "#1F1F1F",
-                mb: 1,
-              }}
-            >
-              Stay in the loop
-            </Typography>
-
-            {/* SUBTITLE */}
-            <Typography
-              sx={{
-                fontSize: "15px",
-                color: "#6B7280",
-                maxWidth: "520px",
-                mx: "auto",
-                mb: 3,
-                lineHeight: "24px",
-              }}
-            >
-              Subscribe to our newsletter and be the first to know about new
-              partnerships, exclusive deals, and platform updates.
-            </Typography>
-
-            {/* INPUT + BUTTON */}
-
-            <Grid size={{ xs: 12, md: 12 }}>
-              <Stack direction={"row"} spacing={2} justifyContent={"center"}>
-                <FormGroup>
-                  <LabeledInput placeholder="Enter your email address" />
-                </FormGroup>
-                <CostumeButton
-                  className="primaryBtn"
-                  stylesRest={{
-                    height: "40px !important",
-                    fontSize: "14px !important",
-                  }}
-                >
-                  Subscribe
-                </CostumeButton>
-              </Stack>
-            </Grid>
-
-            {/* FOOTER TEXT */}
-            <Typography
-              sx={{
-                fontSize: "13px",
-                color: "#9CA3AF",
-                mt: 2,
-              }}
-            >
-              No spam, unsubscribe at any time.
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
     </Box>
   );
 }

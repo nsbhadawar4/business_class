@@ -5,6 +5,7 @@ import RoomIcon from "@mui/icons-material/Room";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import BusinessMap from "./businessMap";
+import ClickableBox from "../router";
 
 export default function ExploreBusiness() {
   const cardData = [
@@ -66,7 +67,10 @@ export default function ExploreBusiness() {
           <Grid container spacing={2} sx={{ pt: 3 }} key="1">
             {cardData.map((item, index) => (
               <Grid size={{ xs: 12, md: 4 }} key={index}>
-                <Box className="customCardShadow">
+                <Box
+                  className="customCardShadow"
+                  sx={{ boxShadow: "0px 1px 36.9px 0px #6A6A6A40" }}
+                >
                   {/* Title */}
                   <Box
                     display="flex"
@@ -74,9 +78,11 @@ export default function ExploreBusiness() {
                     alignItems="center"
                   >
                     <Typography variant="h3">{item.title}</Typography>
-                    <CostumeButton className="successBtn">
-                      More details
-                    </CostumeButton>
+                    <ClickableBox nextPageUrl="/explore-businesses">
+                      <CostumeButton className="successBtn">
+                        More details
+                      </CostumeButton>
+                    </ClickableBox>
                   </Box>
 
                   <Typography variant="h6" color="#64748B" mt={0.3}>

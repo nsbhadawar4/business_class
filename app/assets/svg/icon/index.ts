@@ -16,6 +16,7 @@ import Arrow from "./arrow.svg";
 import Location from "./location.svg";
 import Call from "./call.svg";
 import Message from "./message.svg";
+import Arrowup from "./arrow-up.svg";
 
 const SVGICON = {
   Icon1,
@@ -36,6 +37,7 @@ const SVGICON = {
   Location,
   Call,
   Message,
+  Arrowup,
 };
 
 export default SVGICON;

@@ -1,10 +1,12 @@
 "use client";
-import { Box, Grid, Typography, TextField, Button, Paper } from "@mui/material";
+import { Box, Grid, Typography, FormGroup } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import { LabeledInput } from "../custom-input";
+import CostumeButton from "../button";
 
 export default function GetInTouch() {
   return (
-    <>
+    <Box sx={{ px: 10 }}>
       <Box sx={{ mb: 3, textAlign: "center" }}>
         <Typography variant="h2">
           <span
@@ -24,18 +26,7 @@ export default function GetInTouch() {
           We're here <br /> to help and would love to hear from you.
         </Typography>
       </Box>
-      <Paper
-        elevation={0}
-        sx={{
-          p: { xs: 3, md: 6 },
-          borderRadius: "16px",
-          border: "1px solid #F0F0F0",
-          background: "#fff",
-          maxWidth: "1200px",
-          mx: "auto",
-          mt: 4,
-        }}
-      >
+      <Box className="customCardShadow" sx={{ p: 3 }}>
         {/* Header */}
         <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
           <Box
@@ -56,96 +47,58 @@ export default function GetInTouch() {
             Send us a message
           </Typography>
         </Box>
-
-        <Grid container spacing={3}>
-          {/* First Name */}
+        <Grid container spacing={1}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>First Name</Typography>
-            <TextField
-              fullWidth
-              placeholder="Enter your first name"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  height: "48px",
-                  borderRadius: "10px",
-                },
-              }}
-            />
+            <FormGroup>
+              <LabeledInput
+                label="First Name"
+                placeholder="Enter your First Name"
+              />
+            </FormGroup>
           </Grid>
-
-          {/* Last Name */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>Last Name</Typography>
-            <TextField
-              fullWidth
-              placeholder="Enter your last name"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  height: "48px",
-                  borderRadius: "10px",
-                },
-              }}
-            />
+            <FormGroup>
+              <LabeledInput
+                label="last Name"
+                placeholder="Enter your last Name"
+              />
+            </FormGroup>
           </Grid>
-
-          {/* Email */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>Email</Typography>
-            <TextField
-              fullWidth
-              placeholder="Enter your email address"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  height: "48px",
-                  borderRadius: "10px",
-                },
-              }}
-            />
+          <Grid size={{ xs: 12, md: 12 }}>
+            <FormGroup>
+              <LabeledInput
+                label="email"
+                placeholder="Enter your email address"
+              />
+            </FormGroup>
           </Grid>
-
-          {/* Subject */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>Subject</Typography>
-            <TextField
-              fullWidth
-              placeholder="What is this about?"
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  height: "48px",
-                  borderRadius: "10px",
-                },
-              }}
-            />
+          <Grid size={{ xs: 12, md: 12 }}>
+            <FormGroup>
+              <LabeledInput label="Subject" placeholder="what is this about?" />
+            </FormGroup>
           </Grid>
-
-          {/* Message */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Typography sx={{ mb: 1, fontWeight: 500 }}>Message</Typography>
-            <TextField
-              fullWidth
+          <Grid size={{ xs: 12, md: 12 }}>
+            <Typography variant="h6" color="#020817" fontWeight={"600"}>
+              Message
+            </Typography>
+            <textarea
+              className="textareaNotes"
               placeholder="Tell us how we can help you..."
-              multiline
-              rows={5}
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  borderRadius: "10px",
-                },
-              }}
-            />
+            ></textarea>
           </Grid>
 
           {/* reCAPTCHA + Submit Button */}
           <Grid
-            size={{ xs: 12, md: 6 }}
+            size={{ xs: 12, md: 12 }}
             sx={{
               mt: 2,
               display: "flex",
               flexWrap: "wrap",
               gap: 2,
               alignItems: "center",
+              justifyContent: "end",
             }}
           >
-            {/* reCAPTCHA placeholder */}
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
@@ -163,28 +116,12 @@ export default function GetInTouch() {
             </Box>
 
             {/* Send Message Button */}
-            <Button
-              fullWidth
-              sx={{
-                height: "50px",
-                borderRadius: "10px",
-                background: "linear-gradient(90deg, #4F46E5 0%, #A855F7 100%)",
-                color: "#fff",
-                fontWeight: 600,
-                textTransform: "none",
-                px: 6,
-                "&:hover": {
-                  background:
-                    "linear-gradient(90deg, #4338CA 0%, #9333EA 100%)",
-                },
-                width: { xs: "100%", md: "45%" },
-              }}
-            >
-              Send Message
-            </Button>
+            <Box>
+              <CostumeButton className="primaryBtn">Send Message</CostumeButton>
+            </Box>
           </Grid>
         </Grid>
-      </Paper>
-    </>
+      </Box>
+    </Box>
   );
 }

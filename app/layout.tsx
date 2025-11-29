@@ -29,7 +29,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.svg" />
+      {/* <link rel="icon" href="/favicon.svg" /> */}
       <title>Loyalty Credit</title>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeRegistry>

@@ -48,11 +48,11 @@ a {
 .textareaNotes,
 .textareaNotes:focus {
   width: 100%;
-  border: 1px solid #dddde6;
-  border-radius: 5px;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
   padding: 10px;
   font-size: 14px;
-  background-color: #f3f3f5;
+  background-color: #FFFFFF;
   min-height: 150px;
   outline: none;
 }

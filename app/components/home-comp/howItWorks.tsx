@@ -34,22 +34,35 @@ export default function HowItWorks() {
   ];
 
   return (
-    <Box sx={{ mt: 5 }}>
+    <Box>
+      <Box sx={{ mb: 3, textAlign: "center" }}>
+        <Typography variant="h2">
+          <span
+            style={{
+              background: "none",
+              WebkitBackgroundClip: "unset",
+              WebkitTextFillColor: "#020817",
+              paddingRight: "10px",
+            }}
+          >
+            How It
+          </span>
+          Works
+        </Typography>
+        <Typography variant="h6" sx={{ color: "#64748B", mt: 1 }}>
+          Getting started is simple. Follow these four easy steps to unlock
+          exclusive discounts at <br /> your favorite local businesses.
+        </Typography>
+      </Box>
       <Grid container spacing={3} justifyContent="center">
         {steps.map((item, index) => (
           <Grid size={{ xs: 6, md: 3 }} key={index}>
             <Box
+              className="customCardShadow"
               sx={{
-                background: "#fff",
-                p: 3,
-                borderRadius: "20px",
-                height: "100%",
-                boxShadow: "0px 2px 20px rgba(0,0,0,0.05)",
-                transition: "all 0.3s ease",
                 textAlign: "center",
-                "&:hover": {
-                  boxShadow: "0px 4px 25px rgba(0,0,0,0.1)",
-                },
+                border: "none",
+                py: 4,
               }}
             >
               {/* Number + Icon Row */}
@@ -62,40 +75,39 @@ export default function HowItWorks() {
                   mb: 2,
                 }}
               >
-                <Typography
-                  sx={{
-                    fontSize: "18px",
-                    fontWeight: "700",
-                    color: "#000",
-                  }}
-                >
-                  {item.id}
-                </Typography>
-
                 <Box
                   sx={{
                     width: 44,
                     height: 44,
-                    background: "#F0F2FF",
+                    background:
+                      "linear-gradient(135deg, rgba(0, 0, 255, 0.2) 0%, rgba(187, 51, 255, 0.2) 100%)",
                     borderRadius: "12px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
-                  {item.icon}
+                  <Typography
+                    sx={{
+                      fontSize: "18px",
+                      fontWeight: "700",
+                      color: "#64748B",
+                    }}
+                  >
+                    {item.id}
+                  </Typography>
                 </Box>
+
+                <Box>{item.icon}</Box>
               </Box>
 
               {/* Title */}
-              <Typography sx={{ fontSize: "18px", fontWeight: 700, mb: 1 }}>
+              <Typography variant="h4" sx={{ color: "#020817", mb: 1 }}>
                 {item.title}
               </Typography>
 
               {/* Description */}
-              <Typography
-                sx={{ fontSize: "14px", color: "#6B7280", lineHeight: "22px" }}
-              >
+              <Typography variant="h6" sx={{ color: "#64748B" }}>
                 {item.desc}
               </Typography>
             </Box>

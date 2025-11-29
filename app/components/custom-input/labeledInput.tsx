@@ -73,6 +73,7 @@ function LabeledInputComponent({
             fontSize: "14px",
             fontWeight: "500",
             padding: "8px 0px",
+            textTransform: "capitalize",
           }}
         >
           {label}
@@ -88,10 +89,10 @@ function LabeledInputComponent({
             {
               flex: 1,
               "& .MuiInputBase-root": {
-                borderRadius: "5px",
-                border: "1px solid #DDDDE6",
+                borderRadius: "10px",
+                border: "1px solid #E2E8F0",
                 height: "40px",
-                background: "#F3F3F5",
+                background: "#FFFFFF",
                 // paddingLeft:
                 //   icon && iconPosition === "left"
                 //     ? "30px !important"
@@ -107,9 +108,10 @@ function LabeledInputComponent({
               },
               "& .MuiInputBase-input::placeholder": {
                 fontSize: "14px",
-                color: "gray",
+                color: "#64748B",
                 fontWeight: "400",
                 opacity: "1",
+                textTransform: "capitalize",
                 ...placeholderStyle,
               },
             } as SxProps<Theme>

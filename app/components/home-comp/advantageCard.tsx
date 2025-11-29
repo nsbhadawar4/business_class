@@ -1,19 +1,11 @@
 "use client";
-
-import React from "react";
-import { Grid, Box, Typography, Card, Button, Stack } from "@mui/material";
-
-// Icons
-import TimerOutlinedIcon from "@mui/icons-material/TimerOutlined";
-import StarRoundedIcon from "@mui/icons-material/StarRounded";
-import WorkspacePremiumRoundedIcon from "@mui/icons-material/WorkspacePremiumRounded";
-import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import { Grid, Box, Typography, Stack } from "@mui/material";
 import SVGICON from "@/app/assets/svg/icon";
 import CostumeButton from "../button";
 
 export default function AdvantageCard() {
   return (
-    <Box sx={{ p: 4 }}>
+    <Box>
       <Grid container spacing={4}>
         {/* -------- LEFT SECTION -------- */}
         <Grid size={{ xs: 12, md: 6 }}>
@@ -229,11 +221,11 @@ export default function AdvantageCard() {
               }}
             >
               <Stack direction={"row"} spacing={2}>
-                <SVGICON.Timerfill />
+                <SVGICON.Celerate />
                 <Box>
-                  <Typography variant="h4">1 Week Pass</Typography>
+                  <Typography variant="h4">1 Month Pass</Typography>
                   <Typography variant="h6" color="#64748B">
-                    7 days
+                    30 days
                   </Typography>
                 </Box>
               </Stack>
