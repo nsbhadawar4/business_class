@@ -2,6 +2,8 @@
 import { Grid, Box, Typography, Stack } from "@mui/material";
 import SVGICON from "@/app/assets/svg/icon";
 import CostumeButton from "../button";
+import Image from "next/image";
+import IMAGES from "@/app/assets/images";
 
 export default function AdvantageCard() {
   return (
@@ -40,8 +42,16 @@ export default function AdvantageCard() {
             </Typography>
           </Box>
 
+          <Box my={3}>
+            <Image
+              src={IMAGES.ActivatcardNew}
+              alt="1"
+              style={{ width: "100%",borderRadius:"12px" }}
+            />
+          </Box>
+
           {/* Icons row */}
-          <Grid container spacing={2} sx={{ mt: 3 }}>
+          <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Box
                 className="customCardShadow"

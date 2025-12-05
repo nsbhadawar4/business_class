@@ -20,9 +20,11 @@ export default function Footer() {
             COLUMN 1
         ------------------------------------------------- */}
         <Grid size={{ xs: 12, md: 3 }}>
-          <Typography variant="h2" sx={{ fontSize: "24px", mb: 2 }}>
-            BusinessConnect
-          </Typography>
+          <ClickableBox nextPageUrl="/">
+            <Typography variant="h2" sx={{ fontSize: "24px", mb: 2 }}>
+              BusinessConnect
+            </Typography>
+          </ClickableBox>
 
           <Typography variant="h6" sx={{ color: "#64748B", mb: 2 }}>
             The ultimate local business directory platform connecting
@@ -108,7 +110,7 @@ export default function Footer() {
             "Analytics & Reports",
             "Business Support",
           ].map((item) => (
-          <Typography
+            <Typography
               key={item}
               style={{
                 color: "#64748B",

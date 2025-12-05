@@ -86,11 +86,11 @@ export const CostumeButtonStyled = styled("div")(() => ({
   },
 
   "& .lavenderBtn": {
-    background: "#9B59B612",
-    color: "#9B59B6",
-    border: "1px solid #9B59B6",
+    background: "#F0F0FF",
+    color: "#7C3BED",
+    border: "1px solid #F0F0FF",
     borderRadius: "8px",
-    height: "46px",
+    height: "50px",
     width: "100%",
     fontSize: "14px",
     textTransform: "capitalize",
@@ -100,8 +100,8 @@ export const CostumeButtonStyled = styled("div")(() => ({
   },
   "& .lavenderBtn:hover": {
     background: "transparent !important",
-    color: "#9B59B6",
-    border: "1px solid #9B59B6",
+    color: "#F0F0FF",
+    border: "1px solid #F0F0FF",
     transition: "all 0.5s ease",
     boxShadow: "none",
   },

@@ -78,7 +78,7 @@ export default function ExploreBusiness() {
                     alignItems="center"
                   >
                     <Typography variant="h3">{item.title}</Typography>
-                    <ClickableBox nextPageUrl="/explore-businesses">
+                    <ClickableBox nextPageUrl="/gallery">
                       <CostumeButton className="successBtn">
                         More details
                       </CostumeButton>
@@ -157,7 +157,9 @@ export default function ExploreBusiness() {
       />
       {/* View All Button (Only once) */}
       <Box my={3} display="flex" justifyContent="center">
+        <ClickableBox nextPageUrl="/explore-businesses">
         <CostumeButton className="primaryBtn">View all</CostumeButton>
+        </ClickableBox>
       </Box>
     </>
   );
